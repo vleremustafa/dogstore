@@ -1,0 +1,51 @@
+{
+    "name": "joeyrush/better-dd",
+    "description": "Die and dump with line number and file path",
+    "type": "library",
+    "keywords": [
+        "better-dd"
+    ],
+    "authors": [
+        {
+            "name": "Joe Rushton",
+            "email": "joe_rushton@hotmail.co.uk",
+            "homepage": "https://joerushton.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/joeyrush/better-dd",
+    "license": "MIT",
+    "require": {
+        "php": "^7.0 || ^8.0",
+        "symfony/var-dumper": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JoeyRush\\BetterDD\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JoeyRush\\BetterDD\\Tests\\": "tests/"
+        },
+        "files": [
+            "tests/functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JoeyRush\\BetterDD\\BetterDDServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --bootstrap vendor/autoload.php tests"
+    }
+}
