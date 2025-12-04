@@ -1,0 +1,225 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <style src="js/js.js"></style>
+  <title>Bootstrap Social Media</title>
+  <script src="dist/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="dist/js/popper.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+
+</head> -->
+{% extends "layoutt/header.html" %}
+{% block content %}
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <div class="">
+<a href="#" id="maina" class="btn text-white w-100  " style="border-radius: 0">Free Domestic (US) shipping for all order over $100!</a>
+</div>
+
+<!-- <nav class="navbar">
+    <div class="d-flex justify-content-center">
+            <div class="container">
+        <img src="img/logo.webp" style="width:30%">
+        </div>
+     <div class="w-25">
+        <ul>
+            <li class=""><a href="#"><i class="bi bi-search"></i></a></li>
+            <li class=""><a href="#"><i class="bi bi-person"></i></a></li>
+            <li class=""><a href="#"><i class="bi bi-bag"></i></a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="">
+        <div class="container">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+        <ul clas="navbar-nav ms-auto">
+            <li class="nav-item"><a href='#' class="nav-link">Home</a></li>
+            <li class="nav-item"><a href='#' class="nav-link">About</a></li>
+            <li class="nav-item"><a href='#' class="nav-link">Home</a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-md ">
+    <div class="container my-4">
+        <div clas="row ">
+        <div class="col-xl-12">
+            <div class="d-flex justify-content-center">
+                <div class="col-xl-7" id="img">
+        <img src="dist/img/logo.webp" style="width:35%;" class="float-end">
+                </div>
+        <div class="align-self-center col-xl-5">
+            <ul class="navbar-nav ms-auto float-end" id="ul1">
+                <li class="nav-item p-2"><a href="#"><i class="bi bi-search"></i></a></li>
+                <li class="nav-item p-2"><a href="#"><i class="bi bi-person"></i></a></li>
+                <li class="nav-item p-2"><a href="#"><i class="bi bi-bag"></i></a></li>
+            </ul>
+        </div>
+        </div>
+        </div>
+        <div class="col-xl-12 ">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center pt-2" id="navbarNav">
+          
+            <ul class="navbar-nav">
+                <li class="nav-item me-3">
+                    <a href="#" class="nav-link text-decoration-underline">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" 
+                    data-bs-toggle="dropdown" aria-haspopup="true" expanded="false" >Walk</a>
+                
+                    <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown" id="toglerclass">
+                      <a href="#" class="dropdown-item font-weight-bold">Walk</a>
+                      <a href="#" class="dropdown-item">Leashes</a>
+                      <a href="#" class="dropdown-item">Waste Bag Holders</a>
+                      <a href="#" class="dropdown-item">Collars</a>
+                      <a href="#" class="dropdown-item">Harnesses</a>
+                    </div>
+                  </li>
+                <li class="nav-item me-3">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" expanded="false">Wear</a>
+                    <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown" id="toglerclass">
+                      <a href="#" class="dropdown-item font-weight-bold">Wear</a>
+                      <a href="#" class="dropdown-item">Shirts</a>
+                      <a href="#" class="dropdown-item">Swaters</a>
+                      <a href="#" class="dropdown-item">Bandanas</a>
+                      <a href="#" class="dropdown-item">Bowties & Collars</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Play</a>
+                </li>
+            
+                <li class="nav-item me-2">
+                     <a href="#" class="nav-link">Sleep</a>
+                  </li>
+                 <li class="nav-item me-2">
+                      <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" expanded="false" >About</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="toglerclass2">
+                        <a href="#" class="dropdown-item font-weight-bold">Sustainability</a>
+                        <a href="#" class="dropdown-item">Partners</a>
+                        
+                      </div>
+                    </li>
+                <li class="nav-item me-2">
+                    <a href="#" class="nav-link">Events&Pop-ups</a>
+                </li>
+            </ul>
+        
+        </div>
+        </div>
+        </div>
+    </div>
+</nav>
+<div class=" " id="slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+ 
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div id="h5">
+              <p class="">Come On In!</p>
+              <p>We've opened up shop!</p>
+              <button type="button" class="p-3 mt-3">YOUR'RE INVITED</button>
+            </div>
+            <img src="dist/img/wall1.avif" class="d-block w-100 " id="img" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div id="h5">
+              <p class="">Play Time!</p>
+              <p>Shop Artisan Crafted Toys</p>
+              <button type="button" class="p-3 mt-3">SHOP TOYS</button>
+            </div>
+            <img src="dist//img/wall2.avif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div id="h5">
+                <p class="">Welcome</p>
+                <p>Dog goods that do good</p>
+                <button type="button"class="p-3 mt-3">SHOP US</button>
+              </div>
+        </div>
+            <img src="dist/img/wall3.avif" class="d-block w-100" alt="...">
+            
+          </div> 
+          <div class="carousel-item" id="cont1">
+            <div class="container" >
+            <div id="h4">
+              <p class="">The Origin Story</p>
+              <p>Founders Jenn and Santos discuss how they came up with their vision.</p>
+              <button type="button"class="p-3 mt-3">WHATCH VIDEO</button>
+            </div>
+            <img src="dist/img/wall4.avif" class="d-block w-100 container" alt="...">
+            </div>
+          </div> 
+          <div class="carousel-item">
+            <div id="h5">
+              <p class="">IFundWomen Crowdfund</p>
+              <p>Thank you for all the support! </p>
+              <button type="button" class="p-3 mt-3">IT'S WRAP</button>
+            </div>
+            <img src="dist/img/wall5.avif" class="d-block w-100" alt="...">
+
+          </div> 
+         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+</div>
+<div class="" id="underslider">
+  <div class="container ">
+      <p class="display-5">GONE TO THE DOGS</p>
+      <p class="p1">Empowering Women Makers through Ethical, Sustainable & Collaborative Design for your Four Legged Friend</p>
+      <button type="button" class="p-2 px-3 mt-2">SHOP ALL</button>
+  </div>
+</div>
+
+<!-- Pjesa e pjeses ku duhet me vendos disa profukte dhe cmime besoj qe kryhet em php -->
+
+<div class="" id="underslider">
+  <div class="container ">
+      <p class="display-5">Dog Goods that do Good™</p>
+      <p class="p1">In collaboration with local businesses, we rescue materials from landfills & repurpose them to create our signature rope collar and leash collection.      </p>
+      <button type="button" class="p-2 px-3 mt-2">SHOP OUR ROPE COLLECTION</button>
+  </div>
+</div>
+    <!-- <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+
+    {%  endblock %}
