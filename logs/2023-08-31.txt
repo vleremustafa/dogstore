@@ -1,0 +1,5 @@
+[31-Aug-2023 17:43:31 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 C:\laragon\www\library-v1\public\route.php(12): Core\Router->dispatch('test')
+#1 C:\laragon\www\library-v1\public\index.php(21): require('C:\\laragon\\www\\...')
+#2 {main}
+Thrown in 'C:\laragon\www\library-v1\Core\Router.php' on line 128

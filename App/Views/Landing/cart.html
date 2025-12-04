@@ -1,0 +1,90 @@
+{% extends "layout/layoutt/header.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <!-- Display the books in the shopping cart -->
+        {% for outfit in outfit%}
+        
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img class="card-img-top p-3" style="width:250px; height:350px;" src="uploads/{{ cartOutfit.photo }}" alt="{{ outfit.title }}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title: {{outfit.title}} </h5>
+                            <!-- <p class="card-text">Price: <?php echo $cartBook->getPrice(); ?> €</p> -->
+                            <form method="post" action="">
+                                <label for="numri">Quantity:</label>
+                                <!-- <input type="number" id="numri" name="numri"  value="<?php echo $cartBook->sasia; ?>" min="1">
+                                <input type="hidden" name="book_id"  value="<?php echo $cartBook->getId(); ?>"> -->
+                                <button type="submit" class="btn btn-secondary" name="submit">Update</button>
+                            
+                            <!-- <p class="card-text">Total Price: <?php echo $bookTotalPrice; ?> €</p> -->
+                            <form method="post" action="remove_book.php"> <!-- Updated form action -->
+                            <input type="hidden" name="remove_book_id" value="{{outfit.id}}">
+                             <button type="submit" class="btn btn-danger" name="remove_submit"  class="remove-btn">Remove</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       {% endfor %}
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Kyqu ose vazhdo si musafir</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                
+                <div class="modal-body">
+                <div class="card-body">
+                              <form method="post" id="login" action="">
+                                  <div class="form-group">
+                                      <label class="small mb-1" for="emaili">Emaili:</label>
+                                      <input class="form-control py-4" name="emaili" id="emaili"
+                                             value="" type="text"
+                                             placeholder="Enter emaili"/>
+                                  </div>
+          
+                                  <div class="form-group">
+                                      <label class="small mb-1" for="email">Password :</label>
+                                      <input class="form-control py-4" name="password" id="password"
+                                             value="" type="password"
+                                             placeholder="Enter email password"/>
+                                  </div>
+          
+          
+                                  <input class="btn btn-primary" id="login" value="Login" type="submit" name="login"/>
+                              </form>
+                              
+                </div>
+                <div class="modal-footer">
+                <a href="Krijollogari.php" class="btn btn-secondary" id="createAccountLink">Krijo llogari</a>
+                   <a href="checkout.php" class="btn btn btn-info">Vazhdo si musafir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+              <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+              <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          
+          <!-- Bootstrap JS and Popper.js -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+              
+              <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+              <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+          
+          
+          
+          
+          
+{% endblock %}

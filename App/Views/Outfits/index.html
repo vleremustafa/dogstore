@@ -1,0 +1,65 @@
+{% extends "layout/appLayout.html" %}
+
+{% block title %}DogStore | Outfits{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Outfits</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Outfits</li>
+        </ol>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Title</th>
+                            <th>Photo</th>
+                            <th>Cost</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                            
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for outfit in outfit %}
+                        
+                        <tr>
+                            <td>{{ outfit.category.name }} </td>
+                            <td>{{ outfit.title}}</td>
+                            <td><img style="width: 50px; height: 50px; object-fit: cover"
+                                src="uploads/{{ outfit.photo }}">
+                            </td>
+                            <td>{{ outfit.cost }}</td>
+                            <td>{{ outfit.created_at }}</td>
+                            <td>{{ outfit.updated_at }}</td>
+                            <td> <form method='post' action='outfits-edit'>
+                                <input type='hidden' name='id' value='{{outfit.id}}'>
+                                <input type='submit' value='Edit'>
+                            </form></td>
+                            <td><form method='post' action='outfits-delete'>
+                                <input type='hidden' name='id'value='{{outfit.id}}'>
+                                <input type='submit' value='Delete'>
+                            </form></td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block css %}
+<style>
+
+</style>
+{% endblock %}

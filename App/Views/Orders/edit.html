@@ -1,0 +1,63 @@
+{% extends "layout/appLayout.html" %}
+
+{% block title %}Order Edit{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Edit order</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header">
+                        <h3 class="text-center font-weight-light my-2">Edit order</h3>
+                    </div>
+
+                    <div class="card-body">
+                      
+                        <form method="post" action="orders-update" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="{{ order.id }}">
+                            <div class="form-group">
+                                <label class="small mb-1" for="costumers">costumer</label>
+                                <select class="form-control" name="costumer_id" id="costumers">
+                                    <option value="">zgjedh nje costumer</option>
+                                    {% for costumer in costumers %}
+                                    <option value="{{ costumer.id }}" {% if order.costumer_id == costumer_id %} selected {% endif %}>{{ costumer.first_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1" for="worker">worker</label>
+                                <select class="form-control" name="worker_id" id="worker">
+                                    <option value="">zgjedh nje worker</option>
+                                    {% for worker in workers %}
+                                    <option value="{{ worker.id }}" {% if order.worker_id == worker.id %} selected {% endif %}>{{ worker.first_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1" for="outfit">outfit</label>
+                                <select class="form-control" name="outfit_id" id="outfit">
+                                    <option value="">zgjedh nje outfit</option>
+                                    {% for outfit in outfits %}
+                                    <option value="{{ outfit.id }}" {% if order.outfit_id == outfit_id %} selected {% endif %}>{{ outfit.title }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1">Order</label>
+                                <textarea class="w-100 form-control" name="comment">{{ order.comment }}</textarea>
+                            </div>
+                            
+                            <br> <br>
+                            <div id="authors">
+                                <input class="btn btn-primary" id="login" value="Edit Order" type="submit"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+
+{% endblock %}

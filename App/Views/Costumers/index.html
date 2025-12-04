@@ -1,0 +1,70 @@
+{% extends "layout/appLayout.html" %}
+
+{% block title %}Dogstore | Costumer{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Costumer</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Costumer</li>
+        </ol>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Country</th>
+                            <th>City</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <!-- <th>Password</th> -->
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% for costumer in costumer %}
+                            
+                        <tr>
+                            <td>{{ costumer.first_name }}</td>
+                            <td>{{ costumer.last_name }}</td>
+                            <td>{{ costumer.country }}</td>
+                            <td>{{ costumer.city }}</td>
+                            <td>{{ costumer.address }}</td>
+                            <td>{{ costumer.phone }}</td>
+                            <td>{{ costumer.email }}</td>
+                            <!-- <td>{{ costumer.password }}</td> -->
+                            <!-- <td>{{ costumer.status }}</td> -->
+                            
+                            <td> <form method='post' action='costumers-edit'>
+                            <input type='hidden' name='id' value='{{costumer.id}}'>
+                            <input type='submit' value='Edit'>
+                        </form></td>
+                        <td><form method='post' action='costumers-delete' onsubmit="return confirmSubmit();">
+                            <input type='hidden' name='id' value='{{costumer.id}}'>
+                            <input type='submit' value='Delete'>
+                        </form></td>
+                        </tr>
+                        
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    function confirmSubmit() {
+        var confirmation = confirm("Are you sure you want to delete this author?");
+        return confirmation;
+    }
+</script>
+{% endblock %}

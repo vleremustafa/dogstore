@@ -1,0 +1,117 @@
+{% extends "layout/appLayout.html" %}
+
+{% block title %}Order Create{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Add Order</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header">
+                        <h3 class="text-center font-weight-light my-2">Add Order</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- <form method="post" action=" orders-store" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="small mb-1" for="costumer">Costumer</label>
+                                <select class="form-control" name="costumer_id" id="costumer">
+                                    <option value="">Zgjedh nje Konsumator</option>
+                                    {% for costumer in costumers %}
+                                    <option value="{{ costumer.id }}">{{ costumer.first_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                           
+                            <div class="form-group">
+                                <label class="small mb-1" for="category">Worker</label>
+                                <select class="form-control" name="worker_id" id="worker">
+                                    <option value="">zgjedh nje punetor</option>
+                                    {% for worker in workers %}
+                                    <option value="{{ worker.id }}">{{ worker.first_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="small mb-1" for="outfit">Outfit</label>
+                                <select class="form-control" name="outfit_id" id="outfit">
+                                    <option value="">zgjedh nje Outfit</option>
+                                    {% for outfit in outfits %}
+                                    <option value="{{ outfit.id }}">{{ outfit.title }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="small mb-1" for="comment">Comment</label>
+                                <input class="form-control py-4" name="comment" id="comment" type="text"
+                                       placeholder="Enter comment"/>
+                            </div>
+                            <br> <br>
+                          
+                           
+                            <div class="form-group">
+                                <label class="small mb-1" for="category">Category</label>
+                                <select class="form-control" name="category_id" id="category">
+                                    <option value="">zgjedh nje kategori</option>
+                                    {% for category in categories %}
+                                    <option value="{{ category.id }}">{{ category.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div> -->
+                            
+                        
+                 
+                        <!-- </div>
+                        </div>
+                            <input class="btn btn-primary" value="Create Category" type="submit" />
+                        </form> --> 
+                        <form method="post" action="orders-store" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="small mb-1" for="costumer">Customer</label>
+                                <select class="form-control" name="costumer_id" id="costumer" required>
+                                    <option value="">Choose a Customer</option>
+                                    {% for costumer in costumers %}
+                                        <option value="{{ costumer.id }}">{{ costumer.first_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label class="small mb-1" for="worker">Worker</label>
+                                <select class="form-control" name="worker_id" id="worker" required>
+                                    <option value="">Choose a Worker</option>
+                                    {% for worker in workers %}
+                                        <option value="{{ worker.id }}">{{ worker.first_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label class="small mb-1" for="outfit">Outfit</label>
+                                <select class="form-control" name="outfit_id" id="outfit" required>
+                                    <option value="">Choose an Outfit</option>
+                                    {% for outfit in outfits %}
+                                        <option value="{{ outfit.id }}">{{ outfit.title }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label class="small mb-1" for="comment">Comment</label>
+                                <input class="form-control py-4" name="comment" id="comment" type="text" placeholder="Enter comment" required/>
+                            </div>
+                        
+                            <input class="btn btn-primary" value="Create Order" type="submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

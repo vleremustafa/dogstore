@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+   padding: 0;
+ }
+
+#maina{
+    background-color: rgb(5, 5, 105);
+    padding:12px 0;
+}
+#maina:hover{
+    background-color: rgb(8, 8, 135);
+}
+#ul1 li a{
+    color:rgb(9, 9, 153);
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+#ul1 li a:hover{
+    color:rgb(8, 8, 135);
+}
+#navbarNav ul li a{
+    color:rgb(9, 9, 153);
+}
+
+#h5{
+    position: absolute;
+    top:20%;
+    left:20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color:black;
+}
+#h4{
+    position: absolute;
+    top:20%;
+    left:35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color:black;
+    z-index: 1;
+}
+#h5 p,#h4 p{
+    color:rgb(9, 9, 153);
+    font-size:20px;
+  /* font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight:100; */
+  font-weight: 0;
+}
+.nav-item a:hover{
+text-decoration: underline;
+}
+#h5 p:first-child,
+#h4 p:first-child{
+    font-size: 40px;
+}
+#cont1 img{
+    transform: scale(1.2);
+}
+#h5 button,#h4 button{
+    background-color:rgb(13, 13, 142) ;
+    font-size: 16px;
+    color:white;
+    border:1px rgb(13, 13, 142)  solid;
+}
+#underslider .container button{
+    background-color:rgb(13, 13, 142) ;
+    font-size: 14px;
+    color:white;
+    border:1px rgb(13, 13, 142)  solid;
+}
+#h5 button:hover,#h4 button:hover,
+#underslider .container button:hover{
+    background-color:rgb(17, 17, 168);
+}
+.carousel-item img {
+    height: 650px; /* Adjust the height as needed */
+    object-fit: cover;
+  }
+.carousel-inner , #toglerclass,#toglerclass2
+{
+    border: 1px solid rgb(220, 190, 92);
+}
+#toglerclass{
+   position: absolute;
+   top:85%;
+   text-align: center;
+}
+#toglerclass a:first-child {
+    font-weight: bold;
+    
+}
+#toglerclass a,#toglerclass2 a{
+    background-color: white;
+    
+}
+#toglerclass a:hover{
+    text-decoration: underline;
+}
+#toglerclass2{
+    position:absolute;
+    top:85%;
+    left:50%;
+    
+    
+}
+.underline {
+    text-decoration: underline;
+  }
+  /* ===================underslider=================== */
+  /* #underslider{
+    background-image: url(https://gonetothedogs.co/cdn/shop/files/GonetotheDogs-background_1950x.jpg?v=1614318840&quot;);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    
+  } */
+  #underslider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    /* Ensure the background image covers the entire area */
+    background-image: url('https://gonetothedogs.co/cdn/shop/files/GonetotheDogs-background_1950x.jpg?v=1614318840');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #underslider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Set the overlay color and opacity */
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the opacity here */
+  }
+  
+  #underslider .container {
+    text-align: center;
+    width: 53%;
+    z-index: 1; /* Ensure content appears above the overlay */
+  }
+  
+  #underslider .container p {
+    color: rgb(33, 18, 149);
+    text-shadow: 2px 4px 4px rgba(149, 157, 172, 0.7);
+  }
+  
+  #underslider .container .p1 {
+    font-size: 18px;
+  }
+  #underslider .container {
+    text-align: center;
+    width:53%;
+  }
+  #underslider .container p{
+   color: rgb(33, 18, 149);
+   text-shadow: 2px 4px 4px rgba(149, 157, 172, 0.6);
+   
+  }
+  #underslider .container .p1{
+    font-size: 18px;
+  }
+ h1{
+  color:rgb(33, 18, 149);
+ }
+ .add-to-cart{
+  background-color:rgb(33, 18, 149) ;
+  color:white;
+ }
